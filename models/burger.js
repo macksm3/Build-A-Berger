@@ -3,17 +3,25 @@ const orm = require("../config/orm.js");
 
 // call orm functions
 const burger = {
-  all: function() {
-    return orm.all('burgers');
+  all: function(cb) {
+    orm.all('burgers', function(res) {
+      cb(res);
+    });
   },
-  create: function(cols, vals) {
-    return orm.create('burgers', cols, vals);
+  create: function(cols, vals, cb) {
+    orm.create('burgers', cols, vals, function(res) {
+      cb(res);
+    });
   },
-  update: function(objColVals, condition) {
-    return orm.update('burgers', objColVals, condition);
+  update: function(objColVals, condition, cb) {
+    orm.update('burgers', objColVals, condition, function(res) {
+      cb(res);
+    });
   },
-  delete: function(condition) {
-    return orm.delete('burgers', condition);
+  delete: function(condition, cb) {
+    orm.delete('burgers', condition, function(res) {
+      cb(res);
+    });
   }
 };
 
