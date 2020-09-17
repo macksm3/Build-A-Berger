@@ -6,7 +6,7 @@ A restaurant type database to display burgers available on one side and burgers 
 ![image](public/assets/ScreenShot_build-a-burger.png "application screen shot")
 
 Guthub repo: https://github.com/macksm3/Build-A-Burger 
-Heroku live app: 
+Heroku live app: https://rocky-wave-35281.herokuapp.com/ 
 
 ## Table of Contents 
 
